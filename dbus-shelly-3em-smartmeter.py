@@ -171,22 +171,22 @@ class DbusShelly3emService:
         meter_data['emeters'][remapL1-1] = old_l1
        
       #send data to DBus
-      self._dbusservice['/Ac/Power'] = meter_data['actual']['power_delivered']
-      self._dbusservice['/Ac/L1/Voltage'] = meter_data['actual']['voltage_l1']
-      self._dbusservice['/Ac/L2/Voltage'] = meter_data['actual']['voltage_l2']
-      self._dbusservice['/Ac/L3/Voltage'] = meter_data['actual']['voltage_l3']
-      self._dbusservice['/Ac/L1/Current'] = meter_data['actual']['current_l1']
-      self._dbusservice['/Ac/L2/Current'] = meter_data['actual']['current_l2']
-      self._dbusservice['/Ac/L3/Current'] = meter_data['actual']['current_l3']
-      self._dbusservice['/Ac/L1/Power'] = meter_data['actual']['power_delivered_l1']
-      self._dbusservice['/Ac/L2/Power'] = meter_data['actual']['power_delivered_l2']
-      self._dbusservice['/Ac/L3/Power'] = meter_data['actual']['power_delivered_l3']
-      self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['actual']['energy_delivered_tariff1']/1000)
-      self._dbusservice['/Ac/L2/Energy/Forward'] = (meter_data['actual']['energy_delivered_tariff1']/1000)
-      self._dbusservice['/Ac/L3/Energy/Forward'] = (meter_data['actual']['energy_delivered_tariff1']/1000)
-      self._dbusservice['/Ac/L1/Energy/Reverse'] = (meter_data['actual']['energy_delivered_tariff1']/1000) 
-      self._dbusservice['/Ac/L2/Energy/Reverse'] = (meter_data['actual']['energy_delivered_tariff1']/1000)
-      self._dbusservice['/Ac/L3/Energy/Reverse'] = (meter_data['actual']['energy_delivered_tariff1']/1000) 
+      self._dbusservice['/Ac/Power'] = int(meter_data['actual']['power_delivered'])
+      self._dbusservice['/Ac/L1/Voltage'] = int(meter_data['actual']['voltage_l1'])
+      self._dbusservice['/Ac/L2/Voltage'] = int(meter_data['actual']['voltage_l2'])
+      self._dbusservice['/Ac/L3/Voltage'] = int(meter_data['actual']['voltage_l3'])
+      self._dbusservice['/Ac/L1/Current'] = int(meter_data['actual']['current_l1'])
+      self._dbusservice['/Ac/L2/Current'] = int(meter_data['actual']['current_l2'])
+      self._dbusservice['/Ac/L3/Current'] = int(meter_data['actual']['current_l3'])
+      self._dbusservice['/Ac/L1/Power'] = int(meter_data['actual']['power_delivered_l1'])
+      self._dbusservice['/Ac/L2/Power'] = int(meter_data['actual']['power_delivered_l2'])
+      self._dbusservice['/Ac/L3/Power'] = int(meter_data['actual']['power_delivered_l3'])
+      self._dbusservice['/Ac/L1/Energy/Forward'] = int(meter_data['actual']['energy_delivered_tariff1']/1000)
+      self._dbusservice['/Ac/L2/Energy/Forward'] = int(meter_data['actual']['energy_delivered_tariff1']/1000)
+      self._dbusservice['/Ac/L3/Energy/Forward'] = int(meter_data['actual']['energy_delivered_tariff1']/1000)
+      self._dbusservice['/Ac/L1/Energy/Reverse'] = int(meter_data['actual']['energy_delivered_tariff1']/1000) 
+      self._dbusservice['/Ac/L2/Energy/Reverse'] = int(meter_data['actual']['energy_delivered_tariff1']/1000)
+      self._dbusservice['/Ac/L3/Energy/Reverse'] = int(meter_data['actual']['energy_delivered_tariff1']/1000) 
       
       # Old version
       #self._dbusservice['/Ac/Energy/Forward'] = self._dbusservice['/Ac/L1/Energy/Forward'] + self._dbusservice['/Ac/L2/Energy/Forward'] + self._dbusservice['/Ac/L3/Energy/Forward']
