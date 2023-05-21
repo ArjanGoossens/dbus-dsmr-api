@@ -59,11 +59,13 @@ After that call the install.sh script.
 
 The following script should do everything for you:
 
+rm -rfv /data/dbus-shelly-3em-smartmeter/*
+
 wget https://github.com/ArjanGoossens/dbus-dsmr-api/archive/refs/heads/main.zip
 unzip main.zip "dbus-dsmr-api-main/*" -d /data
 mv /data/dbus-dsmr-api-main /data/dbus-shelly-3em-smartmeter
-chmod a+x /data/dbus-shelly-3em-smartmeter/install.sh
-/data/dbus-shelly-3em-smartmeter/install.sh
+chmod a+x /data/dbus-shelly-3em-smartmeter/dbus-dsmr-api-main/install.sh
+/data/dbus-shelly-3em-smartmeter/dbus-dsmr-api-main/install.sh
 rm main.zip
 
 ```
