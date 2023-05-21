@@ -178,15 +178,15 @@ class DbusShelly3emService:
       self._dbusservice['/Ac/L1/Current'] = meter_data['actual'][10]['value']
       self._dbusservice['/Ac/L2/Current'] = meter_data['actual'][11]['value']
       self._dbusservice['/Ac/L3/Current'] = meter_data['actual'][12]['value']
-      self._dbusservice['/Ac/L1/Power'] = meter_data['actual'][13]['value']
-      self._dbusservice['/Ac/L2/Power'] = meter_data['actual'][14]['value']
-      self._dbusservice['/Ac/L3/Power'] = meter_data['actual'][15]['value']
-      self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['actual'][13]['value']/1000)
-      self._dbusservice['/Ac/L2/Energy/Forward'] = (meter_data['actual'][14]['value']/1000)
-      self._dbusservice['/Ac/L3/Energy/Forward'] = (meter_data['actual'][15]['value']/1000)
-      self._dbusservice['/Ac/L1/Energy/Reverse'] = (meter_data['actual'][16]['value']/1000)
-      self._dbusservice['/Ac/L2/Energy/Reverse'] = (meter_data['actual'][17]['value']/1000)
-      self._dbusservice['/Ac/L3/Energy/Reverse'] = (meter_data['actual'][18]['value']/1000)
+      self._dbusservice['/Ac/L1/Power'] = (meter_data['actual'][13]['value']*1000)-(meter_data['actual'][16]['value']*1000)
+      self._dbusservice['/Ac/L2/Power'] = (meter_data['actual'][14]['value']*1000)-(meter_data['actual'][17]['value']*1000)
+      self._dbusservice['/Ac/L3/Power'] = (meter_data['actual'][15]['value']*1000)-(meter_data['actual'][18]['value']*1000)
+      self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['actual'][13]['value']*1000)
+      self._dbusservice['/Ac/L2/Energy/Forward'] = (meter_data['actual'][14]['value']*1000)
+      self._dbusservice['/Ac/L3/Energy/Forward'] = (meter_data['actual'][15]['value']*1000)
+      self._dbusservice['/Ac/L1/Energy/Reverse'] = (meter_data['actual'][16]['value']*1000)
+      self._dbusservice['/Ac/L2/Energy/Reverse'] = (meter_data['actual'][17]['value']*1000)
+      self._dbusservice['/Ac/L3/Energy/Reverse'] = (meter_data['actual'][18]['value']*1000)
       
       # Old version
       #self._dbusservice['/Ac/Energy/Forward'] = self._dbusservice['/Ac/L1/Energy/Forward'] + self._dbusservice['/Ac/L2/Energy/Forward'] + self._dbusservice['/Ac/L3/Energy/Forward']
