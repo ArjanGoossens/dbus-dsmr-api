@@ -171,7 +171,7 @@ class DbusShelly3emService:
         meter_data['emeters'][remapL1-1] = old_l1
        
       #send data to DBus
-      self._dbusservice['/Ac/Power'] = meter_data['actual'][5]['value']-meter_data['actual'][6]['value']
+      self._dbusservice['/Ac/Power'] = (meter_data['actual'][5]['value']*1000)-(meter_data['actual'][6]['value']*1000)
       self._dbusservice['/Ac/L1/Voltage'] = int(meter_data['actual'][7]['value'])
       self._dbusservice['/Ac/L2/Voltage'] = int(meter_data['actual'][8]['value'])
       self._dbusservice['/Ac/L3/Voltage'] = int(meter_data['actual'][9]['value'])
