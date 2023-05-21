@@ -175,9 +175,9 @@ class DbusShelly3emService:
       self._dbusservice['/Ac/L1/Voltage'] = int(meter_data['actual'][7]['value'])
       self._dbusservice['/Ac/L2/Voltage'] = int(meter_data['actual'][8]['value'])
       self._dbusservice['/Ac/L3/Voltage'] = int(meter_data['actual'][9]['value'])
-      self._dbusservice['/Ac/L1/Current'] = int(meter_data['actual'][10]['value'])
-      self._dbusservice['/Ac/L2/Current'] = int(meter_data['actual'][11]['value'])
-      self._dbusservice['/Ac/L3/Current'] = int(meter_data['actual'][12]['value'])
+      self._dbusservice['/Ac/L1/Current'] = meter_data['actual'][10]['value']
+      self._dbusservice['/Ac/L2/Current'] = meter_data['actual'][11]['value']
+      self._dbusservice['/Ac/L3/Current'] = meter_data['actual'][12]['value']
       self._dbusservice['/Ac/L1/Power'] = int(meter_data['actual'][13]['value'])
       self._dbusservice['/Ac/L2/Power'] = int(meter_data['actual'][14]['value'])
       self._dbusservice['/Ac/L3/Power'] = int(meter_data['actual'][15]['value'])
