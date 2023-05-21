@@ -1,19 +1,24 @@
-# dbus-shelly-3em-smartmeter
-Integrate Shelly 3EM smart meter into [Victron Energies Venus OS](https://github.com/victronenergy/venus)
+# dbus-dsmr-api
+Integrate DSMR smart meter P1 into [Victron Energies Venus OS](https://github.com/victronenergy/venus)
+
+
 
 ## Purpose
 With the scripts in this repo it should be easy possible to install, uninstall, restart a service that connects the Shelly 3EM to the VenusOS and GX devices from Victron.
 Idea is pasend on @RalfZim project linked below.
 
-
-
 ## Inspiration
-This project is my first on GitHub and with the Victron Venus OS, so I took some ideas and approaches from the following projects - many thanks for sharing the knowledge:
+This project is my first on GitHub and with the Victron Venus OS, so this is based on the excellent work of:
+https://github.com/fabian-lauer/dbus-shelly-3em-smartmeter
+
+Who took some ideas and approaches from the following projects - many thanks for sharing the knowledge:
 - https://github.com/RalfZim/venus.dbus-fronius-smartmeter
 - https://github.com/victronenergy/dbus-smappee
 - https://github.com/Louisvdw/dbus-serialbattery
 - https://community.victronenergy.com/idea/114716/power-meter-lib-for-modbus-rtu-based-meters-from-a.html - [Old Thread](https://community.victronenergy.com/questions/85564/eastron-sdm630-modbus-energy-meter-community-editi.html)
 
+
+##TODO##
 ## How it works
 ### My setup
 - Shelly 3EM with latest firmware (20220209-094824/v1.11.8-g8c7bb8d)
