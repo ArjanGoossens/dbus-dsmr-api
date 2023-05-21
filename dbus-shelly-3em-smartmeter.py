@@ -23,7 +23,7 @@ from vedbus import VeDbusService
 
 
 class DbusShelly3emService:
-  def __init__(self, paths, productname='Shelly 3EM', connection='Shelly 3EM HTTP JSON service'):
+  def __init__(self, paths, productname='DSMR P1 Meter', connection='DSMR P1 Meter HTTP JSON service'):
     config = self._getConfig()
     deviceinstance = int(config['DEFAULT']['DeviceInstance'])
     customname = config['DEFAULT']['CustomName']
@@ -58,7 +58,7 @@ class DbusShelly3emService:
     self._dbusservice.add_path('/ProductName', productname)
     self._dbusservice.add_path('/CustomName', customname)
     self._dbusservice.add_path('/Latency', None)
-    self._dbusservice.add_path('/FirmwareVersion', 0.3)
+    self._dbusservice.add_path('/FirmwareVersion', 0.1)
     self._dbusservice.add_path('/HardwareVersion', 0)
     self._dbusservice.add_path('/Connected', 1)
     self._dbusservice.add_path('/Role', role)
