@@ -3,7 +3,7 @@ Integrate DSMR smart meter P1 into [Victron Energies Venus OS](https://github.co
 
 ## Purpose
 With the scripts in this repo it should be easy possible to install, uninstall, restart a service that connects the DSMR Logger (https://github.com/mrWheel/DSMRloggerAPI/tree/master) to the VenusOS and GX devices from Victron.
-Idea is pasend on @RalfZim and @fabian-lauer projects linked below.
+Idea is based on @RalfZim and @fabian-lauer projects linked below.
 
 ## Inspiration
 This project is my first on GitHub and with the Victron Venus OS, so this is based on the excellent work of:
